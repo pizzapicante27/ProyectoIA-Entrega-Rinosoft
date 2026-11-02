@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Conversa con un asistente impulsado por Microsoft Foundry."
+    >
+    <title>Asistente | Chat</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="chat-shell">
+      <header class="chat-header">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M7 8.5A4.5 4.5 0 0 1 11.5 4h13A4.5 4.5 0 0 1 29 8.5v9a4.5 4.5 0 0 1-4.5 4.5H15l-7 5v-5.2A4.5 4.5 0 0 1 4 17.5v-9Z"></path>
+            <path d="M10 11h13M10 16h8"></path>
+          </svg>
+        </div>
+        <div class="header-copy">
+          <p class="eyebrow">MICROSOFT FOUNDRY</p>
+          <h1>Asistente</h1>
+        </div>
+        <span class="connection-indicator">
+          <span class="status-dot" aria-hidden="true"></span>
+          Listo para conversar
+        </span>
+      </header>
+
+      <section class="conversation" aria-label="Conversación">
+        <div class="conversation-intro">
+          <p class="intro-date">TU ESPACIO DE CONVERSACIÓN</p>
+          <h2>¿En qué puedo ayudarte?</h2>
+          <p>Escribe tu pregunta para comenzar. Puedes continuar con preguntas relacionadas.</p>
+        </div>
+
+        <ol class="message-list" id="messages" aria-live="polite" aria-relevant="additions">
+          <li class="message-row assistant-row">
+            <span class="avatar" aria-hidden="true">A</span>
+            <div class="message-content">
+              <span class="message-author">Asistente</span>
+              <p class="message-bubble">¡Hola! Estoy aquí para ayudarte. ¿Qué te gustaría saber?</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="composer-area">
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+        <form class="composer" id="chat-form">
+          <label class="visually-hidden" for="message-input">Escribe un mensaje</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            maxlength="2000"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+            required
+          ></textarea>
+          <div class="composer-footer">
+            <span class="input-hint" id="input-hint">Máximo 2000 caracteres</span>
+            <div class="composer-actions">
+              <span class="character-count" id="character-count" aria-live="off">0 / 2000</span>
+              <button class="send-button" id="send-button" type="submit">
+                <span>Enviar</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  <path d="M3 10h13M10 4l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <p class="footer-note">Las respuestas pueden contener errores. Verifica la información importante.</p>
+      </footer>
+    </main>
+  </body>
+</html>

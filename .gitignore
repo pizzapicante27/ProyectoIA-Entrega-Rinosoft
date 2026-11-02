@@ -1,0 +1,7 @@
+node_modules/
+.env
+.azure/
+*.log
+
+#Esto es para ignorar los archivos de configuración de Visual Studio
+#que no se sube a Github
